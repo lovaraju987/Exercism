@@ -1,0 +1,10 @@
+from matplotlib import pyplot as plt, style
+style.use('ggplot')
+plt.plot([1,2,3],[9,8,7],'g',label='line_one',linewidth=5)
+plt.plot([9,8,7],[1,2,3],'c',label='line_two',linewidth=5)
+plt.title("sample graph")
+plt.xlabel("x-axis")
+plt.ylabel('y-axis')
+plt.legend()
+plt.grid(True, color='K')
+plt.show()
