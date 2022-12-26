@@ -42,7 +42,7 @@ def create_record(azara_record, rui_record):
     :return: tuple or str - the combined record (if compatible), or the string "not a match" (if incompatible).
     """
 
-    return azara_record+rui_record if compare_records(azara_record,rui_record) == True else "not a match"
+    return azara_record+rui_record if compare_records(azara_record,rui_record) is True else "not a match"
 # print(create_record(('Brass Spyglass', '4B'), ('Abandoned Lighthouse', ('4', 'B'), 'Blue')))
 
 
@@ -63,6 +63,6 @@ def clean_up(combined_record_group):
         updated_record.pop(1)
         cleaned_record = tuple(updated_record)
         # cleaned_record = tuple(item for index, item in enumerate(recored) if index != 1)
-        cleaned_report += f'{cleaned_record}\n'
+        cleaned_report += f"{cleaned_record}\n"
     return cleaned_report
 # print(clean_up((('Brass Spyglass', '4B', 'Abandoned Lighthouse', ('4', 'B'), 'Blue'), ('Vintage Pirate Hat', '7E', 'Quiet Inlet (Island of Mystery)', ('7', 'E'), 'Orange'), ('Crystal Crab', '6A', 'Old Schooner', ('6', 'A'), 'Purple'))))
